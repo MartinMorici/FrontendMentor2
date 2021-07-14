@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #4c4e61;
+  background-color: #fafafa;
+}
+
+.texto {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.texto h1 {
+  font-weight: 200;
+  font-size: 1.6em;
+}
+
+.texto p {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #a3a5ae;
+}
+
+.cards {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards .card {
+  border-radius: 8px;
+  background-color: white;
+  width: 305px;
+  height: 210px;
+  margin-top: 30px;
+  padding: 20px 28px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cards .card .barra {
+  position: absolute;
+  top: 0;
+  width: 305px;
+  height: 4px;
+  margin-left: -28px;
+}
+
+.cards .card .barraCian {
+  background-color: #45d3d3;
+}
+
+.cards .card .barraRoja {
+  background-color: #ea5353;
+}
+
+.cards .card .barraNaranja {
+  background-color: #fcaf4a;
+}
+
+.cards .card .barraAzul {
+  background-color: #549ef2;
+}
+
+.cards .card .card__title {
+  margin-top: 5px;
+  font-size: 1.3em;
+}
+
+.cards .card .card__text {
+  color: #a3a5ae;
+  font-size: 13px;
+  margin-top: 2px;
+  line-height: 25px;
+}
+
+.cards .card img {
+  position: absolute;
+  bottom: 25px;
+  right: 28px;
+  width: 50px;
+}
+
+.cards #sup {
+  grid-area: sup;
+}
+
+.cards #team {
+  grid-area: team;
+}
+
+.cards #karma {
+  grid-area: karma;
+}
+
+.cards #calc {
+  grid-area: calc;
+}
+
+@media screen and (min-width: 770px) {
+  .texto h1 {
+    font-size: 2.5em;
+  }
+  .texto p {
+    width: 500px;
+  }
+  .cards {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "sup team" "karma calc";
+    gap: 30px;
+  }
+  .cards .card {
+    margin-top: 0px;
+    width: 340px;
+    height: 250px;
+  }
+  .cards .card .card__title {
+    margin-top: 10px;
+  }
+  .cards .card .barra {
+    width: 340px;
+    margin-left: -28px;
+  }
+  .cards .card img {
+    width: 65px;
+    bottom: 30px;
+  }
+  .cards .card .card__text {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .cards {
+        grid-template-areas: "sup team calc" "sup karma calc";
+  }
+}
+
+.attribution {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #4c4e61;
+}
+/*# sourceMappingURL=styles.css.map */

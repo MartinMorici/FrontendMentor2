@@ -1,0 +1,165 @@
+// Colores Primarios
+$rojo: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$naranja: hsl(34, 97%, 64%);
+$azul: hsl(212, 86%, 64%);
+
+// Colores Neutrales
+
+$azulOscuro: hsl(234, 12%, 34%);
+$azulGrisaceo: hsl(229, 6%, 66%);
+$grisClaro: hsl(0, 0%, 98%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: $azulOscuro;
+    background-color: $grisClaro;
+}
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+.texto{
+    text-align: center;
+    margin-top: 5rem;
+    h1{
+        font-weight: 200;
+        font-size: 1.6em;
+    }
+
+    p{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: $azulGrisaceo;
+    }
+
+}
+
+.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card{
+        border-radius: 8px;
+        background-color: white;
+        width: 305px;
+        height: 210px;
+        margin-top: 30px;
+        padding: 20px 28px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        .barra{
+            position: absolute;
+            top: 0;
+            width: 305px;
+            height: 4px;
+            margin-left: -28px;
+  
+        }
+        .barraCian{
+            background-color: $cyan;
+        }
+        .barraRoja{
+            background-color: $rojo;
+        }
+        .barraNaranja{
+            background-color: $naranja;
+        }
+        .barraAzul{
+            background-color: $azul;
+        }
+        .card__title{
+            margin-top: 5px;
+            font-size: 1.3em;
+        }
+        .card__text{
+            color: $azulGrisaceo;
+            font-size: 13px;
+            margin-top: 2px;
+            line-height: 25px;
+        }
+        img{
+            position: absolute;
+            bottom: 25px;
+            right: 28px;
+            width: 50px;
+        }
+        
+    }
+    #sup{
+        grid-area: sup;
+    }
+    #team{
+        grid-area: team;
+    }
+    #karma{
+        grid-area: karma;
+    }
+    #calc{
+        grid-area: calc;
+    }
+}
+@media screen and (min-width: 770px){
+    .texto{
+        h1{
+            font-size: 2.5em;
+        }
+        p{
+            width: 500px;
+        }
+    }
+    .cards{
+        display: grid;
+        grid-template-areas: "sup team"
+                             "karma calc";
+                             gap: 30px;
+        .card{
+            margin-top: 0px;
+            width: 340px;
+            height: 250px;
+            .card__title{
+                margin-top: 10px;
+            }
+            .barra{
+                width: 340px;
+                margin-left: -28px;
+            }
+            img{
+                width: 65px;
+                bottom: 30px;
+            }
+            .card__text{
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 1150px){
+
+    .cards{
+        grid-template-areas: "sup team calc"
+                             "sup karma calc";
+    }
+}
+
+.attribution{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: $azulOscuro;
+}
