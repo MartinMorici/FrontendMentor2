@@ -1,0 +1,248 @@
+/* Note for text colors:
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+* {
+  margin: 0;
+  padding: 0;
+  background-clip: border-box;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  background-color: #ecf2f8;
+}
+
+.attribution {
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.violeta {
+  background-color: #7541c8;
+}
+
+.violeta .fondo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 25px;
+  height: 104px;
+}
+
+.imgVioleta {
+  border: 2px solid #7541c8;
+}
+
+.imgVioletaDaniel {
+  border: 2px solid #A17ED0;
+}
+
+.gris {
+  background-color: #48556a;
+}
+
+.blanco {
+  background-color: white;
+}
+
+.tblanco {
+  color: #ecf2f8;
+}
+
+.grisAzul {
+  background-color: #19212e;
+}
+
+.name1 {
+  color: #cfcfcf;
+}
+
+.quoteGris {
+  color: rgba(207, 207, 207, 0.7);
+}
+
+.name2 {
+  color: #48556a;
+}
+
+.tgris {
+  color: #48556a;
+}
+
+.quoteGrisOscuro {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+.quotes {
+  margin-top: 60px;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  max-width: 335px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.card .cuerpo {
+  padding: 30px;
+}
+
+.card .cuerpo .card__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.card .cuerpo .card__head img {
+  border-radius: 50%;
+  width: 32px;
+  margin-right: 15px;
+}
+
+.card .cuerpo .card__head .name {
+  margin-bottom: 2px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.card .cuerpo .card__head .status {
+  color: rgba(236, 242, 248, 0.5);
+  font-size: 12px;
+}
+
+.card .cuerpo .card__head .status2 {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.card .card__title {
+  font-weight: 600;
+  font-size: 1.58em;
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+}
+
+.card .card__quote {
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  font-size: 13px;
+  padding-right: 17px;
+}
+
+.card .quote1 {
+  padding-right: 0px;
+}
+
+.card .quote2 {
+  padding-right: 2px;
+}
+
+.card .quote3 {
+  padding-right: 3px;
+}
+
+@media (min-width: 730px) {
+  #daniel {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: daniel;
+  }
+  #jonathan {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: jonathan;
+  }
+  #jeanette {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: jeanette;
+  }
+  #patrick {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: patrick;
+  }
+  #kira {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: kira;
+  }
+  .card {
+    margin: 0px;
+  }
+  .quotes {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "daniel jonathan" "daniel jeanette" "kira   patrick";
+    margin: 0px auto;
+    margin-top: 60px;
+    max-width: 670px;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1160px) {
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    max-width: unset;
+  }
+  .quotes {
+    margin-top: 0px;
+        grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+    max-width: 1120px;
+  }
+  .card .quote3 {
+    padding-right: 2px;
+  }
+  #jeanette {
+    width: 250px;
+  }
+  #jeanette .card__quote {
+    padding-right: 0px;
+  }
+  .card .quote2 {
+    padding-right: 29px;
+  }
+  #daniel {
+    width: 580px;
+  }
+  #patrick {
+    width: 580px;
+  }
+  #jonathan {
+    width: 250px;
+  }
+  #kira {
+    width: 250px;
+  }
+  .violeta .fondo {
+    right: 100px;
+    height: 104px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
