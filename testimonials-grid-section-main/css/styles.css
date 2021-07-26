@@ -17,6 +17,7 @@ body {
 .attribution {
   margin-top: 40px;
   font-size: 16px;
+  text-align: center;
 }
 
 .violeta {
@@ -212,7 +213,7 @@ body {
     max-width: unset;
   }
   .quotes {
-    margin-top: 0px;
+    margin-top: 60px;
         grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
     max-width: 1120px;
   }
